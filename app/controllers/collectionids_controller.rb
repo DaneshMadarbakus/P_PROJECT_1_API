@@ -46,6 +46,6 @@ class CollectionidsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def collectionid_params
-      params.require(:collectionid).permit(:shopify_id)
+      params.require(:collectionid).permit(:influencer_id, :shopify_id)
     end
 end

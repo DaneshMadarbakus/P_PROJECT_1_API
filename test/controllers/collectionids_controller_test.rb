@@ -12,7 +12,7 @@ class CollectionidsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create collectionid" do
     assert_difference('Collectionid.count') do
-      post collectionids_url, params: { collectionid: { shopify_id: @collectionid.shopify_id } }, as: :json
+      post collectionids_url, params: { collectionid: { influencer_id: @collectionid.influencer_id, shopify_id: @collectionid.shopify_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class CollectionidsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update collectionid" do
-    patch collectionid_url(@collectionid), params: { collectionid: { shopify_id: @collectionid.shopify_id } }, as: :json
+    patch collectionid_url(@collectionid), params: { collectionid: { influencer_id: @collectionid.influencer_id, shopify_id: @collectionid.shopify_id } }, as: :json
     assert_response 200
   end
 
