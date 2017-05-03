@@ -1,0 +1,2 @@
+class Collectionid < ApplicationRecord
+end
