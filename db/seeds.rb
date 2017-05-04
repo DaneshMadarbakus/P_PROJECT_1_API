@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+i1 = Influencer.create!(first_name: "Danesh", moniker: "HBK", last_name: "Madarbakus", one_liner: "To be the man you gotta beat the man!", about: "Born and raised in London The Heartbreak Kid is breaking hearts! Studying web development he can build websites now wooo!", front_pic: "http://i.imgur.com/Ae30LxX.jpg", about_pic: "http://i.imgur.com/i7FxQo7.jpg", spotify_about: "I love alll musiccccc it is the best!!!", spotify_pic: "http://i.imgur.com/1uoqNdY.jpg", pic_1: "http://i.imgur.com/Z9mkWku.jpg", pic_2: "http://i.imgur.com/BwO1MNf.jpg", facebook_link: "https://www.facebook.com/danesh.madarbakus", instagram_link: "https://www.instagram.com/danthemman", twitter_link: "https://twitter.com/danthemman93", website_link: "www.daneshmadarbakus.com", spotify_user_id: "21fni3trhdoe3ojvjkix76juy", spotify_playlist_id: "4SwDXCO0XEX2J1unjkph9K")
+
+i2 = Influencer.create!(first_name: "Mariane", moniker: "Amour", last_name: "Jobet", one_liner: "I'm like a fine wine. I get better with age. The best is yet to come.", about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", front_pic: "http://i.imgur.com/y0qzyfI.jpg", about_pic: "http://i.imgur.com/W70SC6F.jpg", spotify_about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", spotify_pic: "http://i.imgur.com/8ejRqyz.jpg", pic_1: "http://i.imgur.com/D8c2jFp.jpg", pic_2: "http://i.imgur.com/HCXuLdW.jpg", facebook_link: "https://www.facebook.com/mariane.jobet", instagram_link: "https://www.instagram.com/nabiriane/", twitter_link: "https://twitter.com/Nabiriane", website_link: "www.mariane.co.uk", spotify_user_id: "21fni3trhdoe3ojvjkix76juy", spotify_playlist_id: "5r6eetHQYrWoBzAyQPZrp1")
+
+
+c1 = i1.collectionids.create!(shopify_id: "426687246")
+c2 = i2.collectionids.create!(shopify_id: "428635086")
+c3 = i1.collectionids.create!(shopify_id: "428631950")
+c4 = i1.collectionids.create!(shopify_id: "428632462")

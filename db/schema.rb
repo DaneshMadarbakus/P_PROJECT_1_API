@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503152629) do
+ActiveRecord::Schema.define(version: 20170503153028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "collectionids", force: :cascade do |t|
+    t.integer  "influencer_id"
     t.string   "shopify_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["influencer_id"], name: "index_collectionids_on_influencer_id", using: :btree
   end
 
   create_table "influencers", force: :cascade do |t|
@@ -43,4 +45,5 @@ ActiveRecord::Schema.define(version: 20170503152629) do
     t.datetime "updated_at",          null: false
   end
 
+  add_foreign_key "collectionids", "influencers"
 end
